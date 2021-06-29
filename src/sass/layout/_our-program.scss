@@ -1,0 +1,261 @@
+.program-section {
+  position: relative;
+  padding-top: 50px;
+
+  max-width: 1680px;
+  background-image: linear-gradient(to bottom, #111518 90%, $bg-color 90%);
+
+  @media screen and (min-width: 728px) {
+    padding-top: 60px;
+
+    background-image: linear-gradient(to bottom, #111518 84%, $bg-color 84%);
+  }
+
+  @media screen and (min-width: 1354px) {
+    padding-top: 120px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    background-image: linear-gradient(
+      to bottom,
+      #111518 85.5%,
+      $bg-color 85.5%
+    );
+
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 280px;
+
+      content: '';
+      border-top: 1px solid #ffffff;
+      width: 100%;
+    }
+  }
+}
+
+.program-section-container {
+  position: relative;
+
+  @media screen and (max-width: 727px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    position: relative;
+    align-self: flex-end;
+    transform: translateY(-28.5%);
+
+    display: block;
+
+    content: '';
+    width: 120px;
+    height: 137px;
+    background-image: url('../images/program-section/program-img-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url('../images/program-section/program-img-mobile@2x.png');
+    }
+
+    @media screen and (min-width: 728px) {
+      transform: translate(7%, -50%);
+
+      width: 384px;
+      height: 280px;
+      background-image: url('../images/program-section/program-img-tablet.png');
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/program-section/program-img-tablet@2x.png');
+      }
+    }
+
+    @media screen and (min-width: 1354px) {
+      align-self: flex-start;
+      transform: translate(-188px, -39.5%);
+
+      width: 672px;
+      height: 502px;
+      background-image: url('../images/program-section/program-img-desktop.png');
+      background-position: top right;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url('../images/program-section/program-img-desktop@2x.png');
+      }
+    }
+  }
+}
+
+.program-section .title {
+  margin-bottom: 43px;
+
+  @include font(800, 20px, 26px, 0.03em);
+  color: $dark-theme-header-color;
+
+  @media screen and (min-width: 728px) {
+    margin-bottom: 52px;
+    font-size: 26px;
+  }
+
+  @media screen and (min-width: 1354px) {
+    margin-bottom: 160px;
+    font-size: 46px;
+  }
+}
+
+@media screen and (max-width: 1353px) {
+  .program-list-wrapper {
+    display: flex;
+    padding-left: 25px;
+
+    @media screen and (max-width: 727px) {
+      max-width: 208px;
+    }
+
+    @media screen and (min-width: 728px) {
+      padding-left: 55px;
+    }
+
+    &::before {
+      position: relative;
+      top: 8px;
+
+      content: '';
+      padding-right: 24px;
+      border-left: 1px solid $dark-theme-header-color;
+      height: 1282px;
+
+      @media screen and (min-width: 728px) {
+        padding-right: 50px;
+        height: 705px;
+      }
+    }
+  }
+}
+
+.program-list {
+  @media screen and (min-width: 1354px) {
+    display: flex;
+  }
+}
+
+.program-list-item {
+  @media screen and (min-width: 1354px) {
+    width: 240px;
+
+    &:not(:first-child) {
+      margin-left: 30px;
+    }
+  }
+
+  @media screen and (max-width: 1353px) {
+    &:not(:first-child) {
+      margin-top: 40px;
+
+      @media screen and (min-width: 728px) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.semester-title {
+  position: relative;
+
+  margin-bottom: 11px;
+
+  @include font(700, 14px, 28px, 0.08em);
+  text-transform: uppercase;
+  color: $dark-theme-header-color;
+
+  @media screen and (min-width: 1354px) {
+    margin-bottom: 25px;
+
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  &::before {
+    position: absolute;
+    transform: translate(-30.5px, 50%);
+    display: block;
+    content: '';
+    background-image: url('../images/svg/ellipse.svg');
+    width: 12px;
+    height: 12px;
+    fill: $accent-color;
+
+    @media screen and (min-width: 728px) {
+      transform: translate(-56.5px, 50%);
+    }
+
+    @media screen and (min-width: 1354px) {
+      transform: translate(50%, -65px);
+    }
+  }
+}
+
+.semester-list {
+  @media screen and (min-width: 728px) and (max-width: 1353px) {
+    display: flex;
+  }
+}
+
+.semester-list-item:not(:first-child) {
+  @media screen and (max-width: 727px) {
+    margin-top: 14px;
+  }
+
+  @media screen and (min-width: 1354px) {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 728px) and (max-width: 1353px) {
+  .semester-list-item:not(:first-child) {
+    margin-left: 50px;
+  }
+
+  .semester-list-item:first-child {
+    width: 176px;
+  }
+
+  .semester-list-item:nth-child(2) {
+    width: 155px;
+  }
+}
+
+.semester-item-title {
+  margin-bottom: 10px;
+
+  @include font(700, 12px, 20px, 0.08em);
+  color: $accent-color;
+
+  @media screen and (min-width: 1354px) {
+    font-size: 20px;
+    line-height: 1.649;
+  }
+}
+
+.semester-item-list {
+  @include font(500, 12px, 20px, 0.08em);
+  color: $light-text-color;
+  opacity: 0.5;
+
+  @media screen and (min-width: 1354px) {
+    font-size: 18px;
+    line-height: 1.556;
+  }
+}

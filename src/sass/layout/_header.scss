@@ -1,0 +1,140 @@
+.header {
+  padding-top: 30px;
+  align-items: center;
+  background-color: #ffffff;
+
+  &-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-navigation-item {
+    @include font(700, 14px, 17px, normal);
+    text-transform: uppercase;
+  }
+}
+
+.logo {
+  &-link {
+    display: inline-block;
+  }
+  &-text {
+    @include font(700, 5px, 5px, 0.18em);
+    text-transform: uppercase;
+    color: $light-theme-header-color;
+  }
+}
+
+.header-navigation-item:hover,
+.header-navigation-item:focus {
+  color: $accent-color;
+}
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+  cursor: pointer;
+}
+
+.header-navigation-item-link {
+  color: $light-text-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+@media screen and (max-width: 727px) {
+  .logo {
+    width: 80px;
+    height: 28px;
+
+    &-light-them {
+      width: 80px;
+      height: 20px;
+    }
+  }
+
+  .header {
+    display: flex;
+  }
+  .header-btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 728px) {
+  .logo {
+    width: 128px;
+    height: 45px;
+
+    &-light-them {
+      width: 128px;
+      height: 32px;
+    }
+    &-text {
+      @include font(700, 8px, 10px, 0.18em);
+    }
+  }
+  .accent-text-logo {
+    color: $accent-color;
+  }
+}
+@media screen and (min-width: 728px) and (max-width: 1353px) {
+  .header {
+    padding-top: 37px;
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      margin-right: 40px;
+      margin-left: auto;
+    }
+  }
+  .logo-link {
+    margin-right: 239px;
+  }
+}
+
+@media screen and (max-width: 1353px) {
+  .header {
+    justify-content: space-between;
+  }
+  .header-navigation {
+    display: none;
+  }
+  .mobile-menu-btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
+  }
+}
+@media screen and (min-width: 1354px) {
+  .header {
+    display: flex;
+
+    .modal-btn {
+      width: 354px;
+      height: 70px;
+      font-size: 14px;
+      line-height: 1.214;
+    }
+
+    &-navigation {
+      margin-right: 60px;
+    }
+
+    &-navigation-list {
+      display: flex;
+    }
+  }
+  .logo {
+    margin-right: 144px;
+  }
+  .header-navigation-item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .header-btn {
+    margin-left: auto;
+  }
+}

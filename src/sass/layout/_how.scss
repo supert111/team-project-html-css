@@ -1,0 +1,132 @@
+// ======== HOW MOBILE OPEN ========
+.how-section {
+  padding: 50px 0px;
+  &-title {
+    @include font(800, 20px, 26px, 0.03em);
+    text-align: center;
+    margin-bottom: 30px;
+
+    color: $light-theme-header-color;
+  }
+  &-item {
+    display: block;
+    width: 100%;
+    padding: 30px 10px;
+    min-height: 280px;
+    text-align: center;
+
+    background: $dark-theme-header-color;
+    box-shadow: 0px 8px 26px rgba(0, 0, 0, 0.1);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 727px) {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &:hover {
+      background-color: $accent-color;
+
+      .how-list-title,
+      .how-list-text {
+        color: white;
+        fill: white;
+      }
+      .how-list-dash {
+        background-color: white;
+        border-color: white;
+      }
+      .how-section-card-icon {
+        --color1: white;
+      }
+    }
+  }
+  &-card-icon {
+    margin-bottom: 20px;
+  }
+}
+
+.how-list {
+  &-title {
+    @include font(700, 14px, 20px, 0.08em);
+
+    color: $light-theme-header-color;
+    margin-bottom: 15px;
+  }
+  &-dash {
+    display: inline-block;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    width: 20px;
+
+    margin-bottom: 15px;
+  }
+  &-text {
+    @include font(500, 12px, 20px, 0.08em);
+
+    color: $light-text-color;
+  }
+}
+// ======== HOW MOBILE CLOSE ========
+
+// ======== HOW TABLET OPEN ========
+@media screen and (min-width: 728px) {
+  .how-section {
+    padding: 53px 0 47px;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px -10px -17px;
+    }
+    &-item {
+      width: calc((100% - 4 * 10px) / 2);
+      margin: 10px 10px 17px;
+      padding: 40px 33px 55px;
+      min-height: 334px;
+    }
+    &-title {
+      font-size: 26px;
+    }
+    &-card-icon {
+      margin-bottom: 30px;
+    }
+  }
+}
+// ======== HOW TABLET CLOSE ========
+
+// ======== HOW PC OPEN ========
+@media screen and (min-width: 1354px) {
+  .how-section {
+    padding: 130px 0;
+
+    &-title {
+      text-align: start;
+      font-size: 46px;
+    }
+    &-list {
+      margin: -10px;
+    }
+    &-item {
+      width: calc((100% - 6 * 10px) / 3);
+      margin: 10px;
+    }
+  }
+
+  .how-list {
+    &-title {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    &-text {
+      font-size: 18px;
+      line-height: 1.56;
+    }
+    &-dash {
+      margin-bottom: 10px;
+    }
+  }
+}
+// ======== HOW PC CLOSE ========
