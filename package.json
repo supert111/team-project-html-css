@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://RomanKeretsman.github.io/hellen-project",
+  "homepage": "https://supert111.github.io/team-project-html-css",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url /hellen-project/",
+    "predeploy": "npm run build -- --public-url /team-project-html-css/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
